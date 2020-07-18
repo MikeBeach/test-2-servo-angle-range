@@ -1,0 +1,12 @@
+pins.A0.digitalWrite(false)
+pins.A3.digitalWrite(false)
+forever(function () {
+    pins.A1.servoWrite(75)
+    pins.A2.servoWrite(75)
+    light.setAll(0xff0000)
+    pause(2000)
+    pins.A1.servoWrite(109)
+    pins.A2.servoWrite(109)
+    light.setAll(0x00ff00)
+    pause(2000)
+})
